@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Private NextStep",
+      "type": "shell",
+      "command": "python",
+      "args": ["app.py"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "dedicated"}
+    },
+    {
+      "label": "Verify demo boundaries",
+      "type": "shell",
+      "command": "python",
+      "args": ["-m", "unittest", "discover", "-s", "tests", "-v"],
+      "group": {"kind": "test", "isDefault": true},
+      "problemMatcher": []
+    }
+  ]
+}
